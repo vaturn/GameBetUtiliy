@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     TextView tv_money;
     Button btn_p, btn_m;
     Money user_account;
+    EditText et_mame;
     private DatabaseReference mDatabase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +33,14 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        mDatabase = FirebaseDatabase.getInstance().getReference("Money");
+        String getData = getIntent().getStringExtra("user_name");
+
+
+        if(getData == null || getData.isEmpty()) getData = "USER";
+
+        Log.e("Main", getData);
+
+        mDatabase = FirebaseDatabase.getInstance().getReference("Money").child(getData);
         mDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
