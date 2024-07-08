@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#87CEEB"
+        android:orientation="vertical"> <!-- 하늘 색 -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WIN?"
+            android:textColor="#0000FF"
+        android:layout_gravity="center"/><!-- 파란색 글씨 -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFC0CB"
+        android:orientation="vertical"> <!-- 분홍색 바탕 -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOSE?"
+            android:textColor="#FF0000"
+        android:layout_gravity="center"/><!-- 빨간색 글씨 -->
+    </LinearLayout>
+</LinearLayout>
