@@ -10,14 +10,16 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="#87CEEB"
-        android:orientation="vertical"> <!-- 하늘 색 -->
+        android:orientation="vertical"
+        android:gravity="center"> <!-- 하늘 색 -->
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="WIN?"
             android:textColor="#0000FF"
-        android:layout_gravity="center"/><!-- 파란색 글씨 -->
+            android:textSize="50dp" /><!-- 파란색 글씨 -->
     </LinearLayout>
 
     <LinearLayout
@@ -26,13 +28,15 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="#FFC0CB"
-        android:orientation="vertical"> <!-- 분홍색 바탕 -->
+        android:orientation="vertical"
+        android:gravity="center"> <!-- 분홍색 바탕 -->
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="LOSE?"
             android:textColor="#FF0000"
-        android:layout_gravity="center"/><!-- 빨간색 글씨 -->
+            android:textSize="50dp" /><!-- 빨간색 글씨 -->
     </LinearLayout>
 </LinearLayout>
