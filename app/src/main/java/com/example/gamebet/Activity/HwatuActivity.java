@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,7 +16,7 @@ import com.example.gamebet.R;
 
 public class HwatuActivity extends AppCompatActivity {
 
-    private FrameLayout topLayout, bottomLayout;
+    private LinearLayout topLayout, bottomLayout;
     private float startY;
 
     @Override
@@ -63,8 +65,8 @@ public class HwatuActivity extends AppCompatActivity {
     }
 
     private void expandLayout(boolean expandTop) {
-        FrameLayout expandingLayout = expandTop ? topLayout : bottomLayout;
-        FrameLayout collapsingLayout = expandTop ? bottomLayout : topLayout;
+        LinearLayout expandingLayout = expandTop ? topLayout : bottomLayout;
+        LinearLayout collapsingLayout = expandTop ? bottomLayout : topLayout;
         expandingLayout.getLayoutParams().height = FrameLayout.LayoutParams.MATCH_PARENT;
         collapsingLayout.getLayoutParams().height = 0;
         expandingLayout.requestLayout();
