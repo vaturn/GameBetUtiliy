@@ -41,9 +41,9 @@ public class HwatuActivity extends AppCompatActivity {
                     case MotionEvent.ACTION_UP:
                         float endY = event.getY();
                         if (startY - endY > 100) { // 상단으로 드래그
-                            expandLayout(true);
-                        } else if (endY - startY > 100) { // 하단으로 드래그
                             expandLayout(false);
+                        } else if (endY - startY > 100) { // 하단으로 드래그
+                            expandLayout(true);
                         }
                         return true;
                 }
@@ -79,11 +79,17 @@ public class HwatuActivity extends AppCompatActivity {
 
     private void fadeTransition(boolean toWin) {
         Animation fadeOut = new AlphaAnimation(1, 0);
-        fadeOut.setDuration(300);
+        fadeOut.setDuration(900);
         Animation fadeIn = new AlphaAnimation(0, 1);
-        fadeIn.setDuration(300);
+        fadeIn.setDuration(900);
 
-        findViewById(android.R.id.content).startAnimation(fadeOut);
+        Intent intent = toWin ? new Intent(HwatuActivity.this, WinActivity.class)
+                : new Intent(HwatuActivity.this, LoseActivity.class);
+        startActivity(intent);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+
+        //findViewById(android.R.id.content).startAnimation(fadeOut);
+        /*
         fadeOut.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) { }
@@ -98,6 +104,6 @@ public class HwatuActivity extends AppCompatActivity {
 
             @Override
             public void onAnimationRepeat(Animation animation) { }
-        });
+        });*/
     }
 }
