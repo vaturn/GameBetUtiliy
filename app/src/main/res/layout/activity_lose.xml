@@ -1,40 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- res/layout/activity_lose.xml -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFC0CB"> <!-- 분홍색 바탕 -->
 
     <TextView
+        android:id="@+id/loseTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
         android:text="LOSE.."
-        android:textSize="30sp"
         android:textColor="#FF0000"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/kwangBakLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="광박"
+        android:textSize="20sp"
+        android:layout_below="@id/loseTitle"
+        android:layout_toLeftOf="@id/kwangBakCheckbox"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+
+    <CheckBox
+        android:id="@+id/kwangBakCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignBaseline="@id/kwangBakLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/piBakLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="피박"
+        android:textSize="20sp"
+        android:layout_below="@id/kwangBakLabel"
+        android:layout_toLeftOf="@id/piBakCheckbox"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"/>
 
     <CheckBox
+        android:id="@+id/piBakCheckbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="광박"
-        android:layout_below="@id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"/>
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="피박"
-        android:layout_below="@id/checkBox"
+        android:layout_alignBaseline="@id/piBakLabel"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginLeft="10dp"/>
 
     <Button
+        android:id="@+id/confirmButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="확정"
-        android:layout_below="@id/checkBox2"
+        android:layout_below="@id/piBakLabel"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="30dp"/>
 </RelativeLayout>

@@ -1,36 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- res/layout/activity_win.xml -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#87CEEB"> <!-- 하늘 색 -->
 
     <TextView
-        android:id="@+id/tv_win"
+        android:id="@+id/winTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         android:text="WIN!!"
         android:textColor="#0000FF"
-        android:textSize="50dp" />
+        android:textSize="50sp" />
 
-    <EditText
-        android:id="@+id/et_score"
+    <TextView
+        android:id="@+id/scoreLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tv_win"
+        android:text="점수"
+        android:textSize="20sp"
+        android:layout_below="@id/winTitle"
+        android:layout_toLeftOf="@id/scoreInput"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:hint="점수"
-        android:textSize="34sp" />
+        android:layout_marginTop="50dp"/>
+
+    <EditText
+        android:id="@+id/scoreInput"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/scoreLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"/>
 
     <Button
+        android:id="@+id/confirmButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="확정"
-        android:layout_below="@id/et_score"
+        android:layout_below="@id/scoreLabel"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:id="@+id/btn_confirm"/>
+        android:layout_marginTop="30dp"/>
 </RelativeLayout>
