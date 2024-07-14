@@ -17,32 +17,29 @@
         android:id="@+id/kwangBakLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="광박"
-        android:textSize="20sp"
         android:layout_below="@id/loseTitle"
+        android:layout_marginTop="50dp"
         android:layout_toLeftOf="@id/kwangBakCheckbox"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"/>
+        android:text="광박"
+        android:textSize="30sp" />
 
     <CheckBox
         android:id="@+id/kwangBakCheckbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_alignBaseline="@id/kwangBakLabel"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="10dp"/>
+        android:layout_marginLeft="10sp" />
 
     <TextView
         android:id="@+id/piBakLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="피박"
-        android:textSize="20sp"
         android:layout_below="@id/kwangBakLabel"
+        android:layout_marginTop="30dp"
         android:layout_toLeftOf="@id/piBakCheckbox"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"/>
+        android:text="피박"
+        android:textSize="30sp" />
 
     <CheckBox
         android:id="@+id/piBakCheckbox"
