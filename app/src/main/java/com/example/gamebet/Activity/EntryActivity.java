@@ -32,7 +32,7 @@ public class EntryActivity extends AppCompatActivity {
         btn_chk_entry = findViewById(R.id.btn_chk_entry);
 
         btn_chk_entry.setOnClickListener(view -> {
-            Intent intent = new Intent(EntryActivity.this, MainActivity.class);
+            Intent intent = new Intent(EntryActivity.this, LobbyActivity.class);
             intent.putExtra("user_name", et_nickname.getText().toString());
             startActivity(intent);
         });
